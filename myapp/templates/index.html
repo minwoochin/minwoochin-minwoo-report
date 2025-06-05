@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>내 개인 홈페이지</title>
+    {% load static %}
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        nav {
+            background: #343a40;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background: #495057;
+            border-radius: 5px;
+        }
+        section {
+            padding: 40px 20px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h1, h2 {
+            font-weight: bold;
+            color: #343a40;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        button {
+            background: #343a40;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+        button:hover {
+            background: #495057;
+        }
+        .profile-img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">소개</a>
+        <a href="#interests">관심 분야</a>
+        <a href="#projects">직장/업무</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <img src="{% static 'images/profile.jpg' %}" alt="프로필 사진" class="profile-img">
+            <h1>안녕하세요! 저는 "진민우" 입니다.</h1>
+            <p>1985년생 소띠 이며, 자기계발을 위하여 경희사이버대학교에 입학하였습니다.</p>
+            <button onclick="location.href='#interests'">관심 분야 보기</button>
+        </section>
+
+        <section id="interests">
+            <h2>관심 분야</h2>
+            <p>세계경제, 주식, AI  관련 서적, 자동차 산업 등에 관심이 있어요</p>
+            <button onclick="location.href='#projects'">개발 실적 보기</button>
+        </section>
+
+        <section id="projects">
+            <h2>직장/업무</h2>
+            <p>현대자동차 그룹사인 유니투스 라는 자동차 부품 회사에서 수소연료전지 품질을 하고 있습니다.</p>
+        </section>
+    </div>
+
+</body>
+</html>
